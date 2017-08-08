@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>导航条</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        ul{
+            list-style-type: none;
+            font-family: "Abadi MT Condensed Light";
+            font-weight: bold;
+        }
+        .menu{
+            margin: 0 auto;
+            padding: 0;
+            display: inline-block;
+            width: 700px;
+            border-radius: 10px;
+            background: #ccc;
+            box-shadow: 2px 2px 3px #ccc;
+        }
+        .menu>li{
+            float: left;
+        }
+        ul a{
+            display: block;
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            color: #fff;
+            background: #ccc;
+            text-decoration: none;
+            text-align: center;
+            transition: all 1s ease;
+        }
+        .menu .first{
+            border-radius:10px 0 0 10px;
+        }
+        .menu-one{
+            height: 50px;
+        }
+        .menu-two{
+            padding: 0;
+            height: 0;
+            overflow: hidden;
+            opacity: 0.2;
+            transition: all 2s ease;
+            box-shadow: 2px 2px 3px #ccc;
+        }
+        .menu li>a:hover{
+            background-color: red;
+        }
+        .menu-two>li:hover a{
+            background-color: red;
+        }
+        .menu .menu-one:hover .menu-two{
+            opacity: 1;
+            height: 150px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<ul class="menu">
+    <li><a href="#" class="first">首页</a></li>
+    <li><a href="#">作品</a></li>
+    <li class="menu-one"><a href="#">更多</a>
+        <ul class="menu-two">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">知乎</a></li>
+            <li><a href="#">博客</a></li>
+        </ul>
+    </li>
+</ul>
+</body>
+</html>
